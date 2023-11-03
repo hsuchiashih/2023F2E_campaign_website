@@ -4,20 +4,31 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <!-- nav -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled">Disabled</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_padding">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img alt="logo" class="pe-2" src="@/assets/img/nav/logo.svg" width="52.17" height="43" />
+          <h4 class="text-primary m-0">喵立翰 Miao Li-Han</h4>
+        </a>
+        <div class="d-flex text-secondary">
+          <a class="nav-link px-3 active" aria-current="page" href="#">候選人主張</a>
+          <a class="nav-link px-3 test" href="#">最新活動</a>
+          <a class="nav-link px-3" href="#">政策議題</a>
+          <a class="nav-link px-3">小額捐款</a>
+          <a class="nav-link px-3">民眾服務信箱</a>
+        </div>
+        <div>
+          <a href="#" class="pe-3">
+            <img src="@/assets/img/nav/fb_icon.svg " width="32" height="32" />
+          </a>
+          <a href="#" class="pe-3">
+            <img src="@/assets/img/nav/ig_icon.svg " width="32" height="32" />
+          </a>
+          <a href="#">
+            <img src="@/assets/img/nav/yt_icon.svg " width="32" height="32" />
+          </a>
         </div>
       </div>
     </nav>
@@ -33,7 +44,182 @@ import HelloWorld from './components/HelloWorld.vue'
       </nav>
     </div> -->
   </header>
-
+  <!-- 標題人物 -->
+  <section>
+    <div class="container big_title_margin">
+      <div class="row">
+        <div class="col-12 text-center pb-3">
+          <p class="font_mantouSans big_title">台灣的明天 喵先鋪路</p>
+        </div>
+        <div class="col-12 text-center pb-3">
+          <img src="@/assets/img/mainPage/2024_title.svg " width="252" height="58" />
+          <img src="@/assets/img/mainPage/name_title.svg " width="433" height="84" />
+        </div>
+        <div class="col-12 text-center">
+          <img src="@/assets/img/mainPage/man_and_bg.svg " width="723" height="537.5" />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="marquee-container font_mantouSans marquee_title">
+            <div class="marquee-content">
+              為喵星人，護台灣！ 從喵的眼中，看見台灣 喵的未來，人的希望
+            </div>
+            <div class="marquee-content2">
+              為喵星人，護台灣！ 從喵的眼中，看見台灣 喵的未來，人的希望
+            </div>
+            <div class="marquee-content3">
+              為喵星人，護台灣！ 從喵的眼中，看見台灣 喵的未來，人的希望
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 候選人主張 -->
+  <section>
+    <div class="container-fluid p-0 bg_advpcate">
+      <div class="row container block_advpcate m-auto">
+        <div class="col-12 content_bg">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+              <div class="text-center">
+                <img src="@/assets/img/advpcate/advpcate_tag.svg" width="114" height="35" />
+              </div>
+              <p class="font_mantouSans title text-center">候選人主張</p>
+              <p class="sub_title">
+                我堅信 ! 藉由推動更完善的<span class="text-primary">貓咪福利</span>和相關政策，
+                更是間接地投資於<span class="text-primary">台灣的未來</span>。
+              </p>
+              <p>
+                畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的
+                GDP 經濟帶來巨大效益。<br />
+                因此，我期望能在立法院內推進這些政策，確保每一隻貓咪都能得到他們應有的照顧，同時也為台灣的經濟發展助一臂之力。讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始。
+              </p>
+            </div>
+            <div class="col-6 advpcate_img_container">
+              <div>
+                <img class="img_cover" src="@/assets/img/advpcate/advpcate_man.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--最新活動 -->
+  <section>
+    <div class="row container block_last_events justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="text-center">
+          <img src="@/assets/img/lastEvents/last_event_tag.svg" alt="" width="154" height="35">
+        </div>
+        <p class="font_mantouSans title text-center">最新活動</p>
+      </div>
+      <div class="col-6">
+        <div class="row ">
+          <div class="col-12 img_container">
+            <img src="@/assets/img/lastEvents/main_event.svg" alt="">
+          </div>
+          <div class="col-12 mt-2">
+            <p>2023/12/26</p>
+            <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
+            <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，
+              決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，
+              每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4 event_content">
+                <img src="@/assets/img/lastEvents/event_01.svg" alt="">
+              </div>
+              <div class="col-8">
+                <p>2023/12/24</p>
+                <h5>掃街模式開啟！帶著你的貓耳，來和我一起走！</h5>
+                <p>街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4 event_content">
+                <img src="@/assets/img/lastEvents/event_02.svg" alt="">
+              </div>
+              <div class="col-8">
+                <p>2023/12/20</p>
+                <h5>收容所模特兒大比拼！</h5>
+                <p>今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4 event_content">
+                <img src="@/assets/img/lastEvents/event_03.svg" alt="">
+              </div>
+              <div class="col-8">
+                <p>2023/12/26</p>
+                <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
+                <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，
+                  決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，
+                  每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mb-4">
+            <button type="button" class="btn btn-info button_style">
+              <div class="d-flex justify-content-center">
+                <p>查看更多</p>
+                <img src="@/assets/img/icons/arrow_forward.svg" alt="">
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <!--政策議題 -->
+  <section>
+    <div class="row container block_policy_issues justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="text-center">
+          <img src="@/assets/img/policyIssues/policy_issues_tag.svg" alt="" width="146" height="35">
+        </div>
+        <p class="font_mantouSans title text-center">政策議題</p>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-4 event_content">
+            <h4>
+              為毛孩子謀福利！<br>
+              推動寵物醫療保障方案
+            </h4>
+            <img src="@/assets/img/policyIssues/issue_01.svg" alt="">
+          </div>
+          <div class="col-4 event_content">
+            <h4>
+              打造休閒天堂！<br>
+              推廣寵物休閒與娛樂場所
+            </h4>
+            <img src="@/assets/img/policyIssues/issue_02.svg" alt="">
+          </div>
+          <div class="col-4 event_content">
+            <h4>
+              推廣寵物飼養教育，讓愛更加專業<br>
+              
+            </h4>
+            <img src="@/assets/img/policyIssues/issue_03.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>    
   <RouterView />
 </template>
 
@@ -102,5 +288,186 @@ nav a:first-of-type {
 </style> -->
 
 <style lang="scss">
-@import "./assets/all.scss";
+@import './assets/all.scss';
+</style>
+
+<style scoped>
+.nav_padding {
+  padding: 12px 24px;
+}
+
+.big_title_margin {
+  margin-top: 97px;
+}
+.font_mantouSans {
+  font-family: 'MantouSans';
+}
+
+.big_title {
+  font-size: 96px;
+  background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+  background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.marquee_title {
+  font-size: 64px;
+  color: white;
+  background-color: #da7d4a;
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+}
+
+.bg_advpcate {
+  background-color: #f7ece1;
+  height: 731px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.marquee-content {
+  padding-left: 30px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-content2 {
+  padding-left: 30px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+}
+.marquee-content3 {
+  padding-left: 30px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.block_advpcate {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  .content_bg {
+    max-width: 1320px;
+    height: 523px;
+    background-color: #ffffff;
+    border-radius: 24px;
+  }
+  .title {
+    font-size: 64px;
+    background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .sub_title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .advpcate_img_container {
+    overflow: hidden;
+    border-radius: 24px;
+
+    .img_cover {
+      object-fit: cover;
+    }
+  }
+}
+
+.block_last_events {
+  margin: 104px auto;
+  .img_container {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .event_content {
+    height: 134px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    border-radius: 8px;
+  }
+  .title {
+    font-size: 64px;
+    background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .button_style {
+    width: 152px;
+    border-radius: 50px;
+    height: 64px;
+    
+    & p {
+      margin: 0;
+      margin-right: 0.5rem;
+      font-size: 16px;
+      color: #334155;
+    }
+  }
+}
+
+.block_policy_issues {
+  margin: 104px auto;
+
+  & h4 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .title {
+    font-size: 64px;
+    background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .event_content {
+    overflow: hidden;
+    margin-bottom: 24px;
+    border-radius: 24px;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
 </style>
