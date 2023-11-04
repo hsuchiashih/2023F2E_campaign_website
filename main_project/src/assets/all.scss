@@ -18,6 +18,10 @@
   font-family: 'MantouSans';
   src: url('@/assets/fonts/MantouSans-Regular.woff') format('woff');
 }
+:root {
+  scroll-padding-top: 5rem
+}
+
 body {
   font-family:
     Inter,
@@ -34,3 +38,4 @@ body {
     sans-serif;
   font-size: 15px;
 }
+
