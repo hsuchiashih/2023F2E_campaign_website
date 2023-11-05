@@ -12,14 +12,14 @@ import HelloWorld from './components/HelloWorld.vue'
           <img alt="logo" class="pe-2" src="@/assets/img/nav/logo.svg" width="52.17" height="43" />
           <h4 class="text-primary m-0">喵立翰 Miao Li-Han</h4>
         </a>
-        <div class="d-flex text-secondary">
+        <div class="text-secondary d-none d-lg-flex">
           <a class="nav-link px-3 active" aria-current="page" href="#section1">候選人主張</a>
           <a class="nav-link px-3" href="#section2">最新活動</a>
           <a class="nav-link px-3" href="#section3">政策議題</a>
           <a class="nav-link px-3" href="#section4">小額捐款</a>
           <a class="nav-link px-3" href="#section4">民眾服務信箱</a>
         </div>
-        <div>
+        <div class="d-none d-sm-block">
           <a href="#" class="pe-3">
             <img src="@/assets/img/nav/fb_icon.svg " width="32" height="32" />
           </a>
@@ -49,14 +49,23 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="container big_title_margin">
       <div class="row">
         <div class="col-12 text-center pb-3">
-          <p class="font_mantouSans big_title">台灣的明天 喵先鋪路</p>
+          <p class="font_mantouSans big_title d-none d-lg-block">台灣的明天 喵先鋪路</p>
+          <span class="font_mantouSans big_title d-lg-none">台灣的明天 </span>
+          <br class="d-lg-none">
+          <span class="font_mantouSans big_title d-lg-none">喵先鋪路</span>
         </div>
         <div class="col-12 text-center pb-3">
-          <img src="@/assets/img/mainPage/2024_title.svg " width="252" height="58" />
-          <img src="@/assets/img/mainPage/name_title.svg " width="433" height="84" />
+          <div class="row justify-content-center align-items-center">
+            <div class="col-6 col-lg-2 img_container">
+              <img class="mb-3 img_cover" src="@/assets/img/mainPage/2024_title.svg"/>
+            </div>
+            <div class="col-7 col-lg-3 img_container">
+              <img class="mb-3 img_cover" src="@/assets/img/mainPage/name_title.svg"/>
+            </div>
+          </div>
         </div>
-        <div class="col-12 text-center">
-          <img src="@/assets/img/mainPage/man_and_bg.svg " width="723" height="537.5" />
+        <div class="col-12 text-center img_container">
+          <img class="img_cover_70" src="@/assets/img/mainPage/man_and_bg.svg"/>
         </div>
       </div>
     </div>
@@ -79,12 +88,12 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </section>
   <!-- 候選人主張 -->
-  <section id="section1" class="text-secondary">
+  <!-- <section id="section1" class="text-secondary">
     <div class="container-fluid p-0 m-0 bg_advpcate">
-      <div class="row container block_advpcate m-auto">
+      <div class="row container block_advpcate">
         <div class="col-12 content_bg">
           <div class="row justify-content-center align-items-center">
-            <div class="col-6 p-5">
+            <div class="col-lg-12 col-xl-6 p-5">
               <div class="text-center">
                 <img src="@/assets/img/advpcate/advpcate_tag.svg" width="114" height="35" />
               </div>
@@ -99,7 +108,7 @@ import HelloWorld from './components/HelloWorld.vue'
                 因此，我期望能在立法院內推進這些政策，確保每一隻貓咪都能得到他們應有的照顧，同時也為台灣的經濟發展助一臂之力。讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始。
               </p>
             </div>
-            <div class="col-6 advpcate_img_container">
+            <div class="col-lg-12 col-xl-6 advpcate_img_container">
               <div>
                 <img class="img_cover" src="@/assets/img/advpcate/advpcate_man.svg" alt="" />
               </div>
@@ -108,9 +117,9 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--最新活動 -->
-  <section id="section2" class="text-secondary">
+  <!-- <section id="section2" class="text-secondary">
     <div class="row container block_last_events justify-content-center align-items-center">
       <div class="col-12">
         <div class="text-center">
@@ -191,9 +200,9 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- 政策議題 -->
-  <section id="section3" class="text-secondary">
+  <!-- <section id="section3" class="text-secondary">
     <div class="row container block_policy_issues justify-content-center align-items-center">
       <div class="col-12">
         <div class="text-center">
@@ -229,9 +238,9 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- 小額捐款 -->
-  <section id="section4" class="text-secondary">
+  <!-- <section id="section4" class="text-secondary">
     <div class="row container block_last_events justify-content-center align-items-center">
       <div class="col-6">
         <div class="block bg-primary">
@@ -281,9 +290,9 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- 台灣的明天 口號 -->
-  <section>
+  <!-- <section>
     <div class="row container block_slogan justify-content-center align-items-center">
       <div class="col-7 text-center">
         <p class="font_mantouSans title ">台灣的明天 喵先鋪路</p>
@@ -292,9 +301,9 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- footer -->
-  <footer class="text-secondary">
+  <!-- <footer class="text-secondary">
     <div class="row container-fluid p-0 m-0 bg_advpcate block_footer justify-content-center align-items-center">
       <div class="col-10">
         <div class="row">
@@ -317,7 +326,7 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
   
   <!-- modal -->
   <div class="modal fade" id="voiceModal" tabindex="-1" aria-labelledby="voiceModalLabel" aria-hidden="true">
@@ -445,6 +454,7 @@ nav {
   margin: 10px;
 }
 
+/* 標題人物 */
 .big_title_margin {
   margin-top: 97px;
 }
@@ -453,7 +463,7 @@ nav {
 }
 
 .big_title {
-  font-size: 96px;
+  font-size: clamp(4rem, 6.5vw, 8.5rem);
   background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
   background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
   background-clip: text;
@@ -471,7 +481,7 @@ nav {
 
 .bg_advpcate {
   background-color: #f7ece1;
-  height: 731px;
+  /* height: 731px; */
 }
 
 .marquee-container {
@@ -532,7 +542,7 @@ nav {
   align-items: center;
   .content_bg {
     max-width: 1320px;
-    height: 523px;
+    /* height: 523px; */
     background-color: #ffffff;
     border-radius: 24px;
   }
@@ -724,5 +734,19 @@ nav {
       color: white;
     }
   }
+}
+
+.img_container {
+  overflow: hidden;
+}
+
+.img_cover {
+  object-fit: cover;
+  width: 100%;
+}
+
+.img_cover_70 {
+  object-fit: cover;
+  width: 70%;
 }
 </style>
