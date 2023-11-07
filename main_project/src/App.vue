@@ -119,21 +119,21 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </section>
   <!--最新活動 -->
-  <!-- <section id="section2" class="text-secondary">
-    <div class="row container block_last_events justify-content-center align-items-center">
+  <section id="section2" class="text-secondary">
+    <div class="row container block_last_events justify-content-center align-items-start">
       <div class="col-12">
         <div class="text-center">
           <img src="@/assets/img/lastEvents/last_event_tag.svg" alt="" width="154" height="35" />
         </div>
         <p class="font_mantouSans title text-center">最新活動</p>
       </div>
-      <div class="col-6">
+      <div class="col-lg-12 col-xl-6">
         <div class="row">
           <div class="col-12 img_container">
-            <img src="@/assets/img/lastEvents/main_event.svg" alt="" />
+            <img class="img_cover" src="@/assets/img/lastEvents/main_event.svg" alt="" />
           </div>
           <div class="col-12 mt-2">
-            <p class="date_color">2023/12/26</p>
+            <p class="date">2023/12/26</p>
             <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
             <p>
               炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，
@@ -143,15 +143,15 @@ import HelloWorld from './components/HelloWorld.vue'
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-lg-12 col-xl-6">
         <div class="row">
           <div class="col-12">
             <div class="row">
               <div class="col-4 event_content">
-                <img src="@/assets/img/lastEvents/event_01.svg" alt="" />
+                <img class="img_cover" src="@/assets/img/lastEvents/event_01.svg" alt="" />
               </div>
               <div class="col-8">
-                <p class="date_color">2023/12/24</p>
+                <p class="date">2023/12/24</p>
                 <h5>掃街模式開啟！帶著你的貓耳，來和我一起走！</h5>
                 <p>
                   街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！
@@ -162,10 +162,10 @@ import HelloWorld from './components/HelloWorld.vue'
           <div class="col-12">
             <div class="row">
               <div class="col-4 event_content">
-                <img src="@/assets/img/lastEvents/event_02.svg" alt="" />
+                <img class="img_cover"  src="@/assets/img/lastEvents/event_02.svg" alt="" />
               </div>
               <div class="col-8">
-                <p class="date_color">2023/12/20</p>
+                <p class="date">2023/12/20</p>
                 <h5>收容所模特兒大比拼！</h5>
                 <p>
                   今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！
@@ -176,10 +176,10 @@ import HelloWorld from './components/HelloWorld.vue'
           <div class="col-12">
             <div class="row">
               <div class="col-4 event_content">
-                <img src="@/assets/img/lastEvents/event_03.svg" alt="" />
+                <img class="img_cover" src="@/assets/img/lastEvents/event_03.svg" alt="" />
               </div>
               <div class="col-8">
-                <p class="date_color">2023/12/26</p>
+                <p class="date">2023/12/26</p>
                 <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
                 <p>
                   炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，
@@ -200,7 +200,7 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- 政策議題 -->
   <!-- <section id="section3" class="text-secondary">
     <div class="row container block_policy_issues justify-content-center align-items-center">
@@ -589,22 +589,33 @@ nav {
 
 .block_last_events {
   margin: 104px auto;
-
-  .date_color {
+  & h5 {
+    font-size: 16px;
+  }
+  .date {
     color: #94A3B8;
+    margin: 0;
+    margin-bottom: 8px;
   }
   .img_container {
     overflow: hidden;
     border-radius: 16px;
   }
+
+  .img_cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
   .event_content {
-    height: 134px;
+    /* height: 134px; */
     overflow: hidden;
     margin-bottom: 24px;
     border-radius: 8px;
   }
   .title {
-    font-size: 64px;
+    font-size: clamp(3rem, 6.5vw, 4rem);
     background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background-clip: text;
