@@ -88,12 +88,12 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </section>
   <!-- 候選人主張 -->
-  <!-- <section id="section1" class="text-secondary">
-    <div class="container-fluid p-0 m-0 bg_advpcate">
-      <div class="row container block_advpcate">
+  <section id="section1" class="text-secondary">
+    <div class="container-fluid bg_advpcate">
+      <div class="row container m-auto block_advpcate">
         <div class="col-12 content_bg">
           <div class="row justify-content-center align-items-center">
-            <div class="col-lg-12 col-xl-6 p-5">
+            <div class="col-lg-12 col-xl-6 advpcate_text_container">
               <div class="text-center">
                 <img src="@/assets/img/advpcate/advpcate_tag.svg" width="114" height="35" />
               </div>
@@ -117,7 +117,7 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!--最新活動 -->
   <!-- <section id="section2" class="text-secondary">
     <div class="row container block_last_events justify-content-center align-items-center">
@@ -481,6 +481,7 @@ nav {
 
 .bg_advpcate {
   background-color: #f7ece1;
+  padding: 104px;
   /* height: 731px; */
 }
 
@@ -542,12 +543,13 @@ nav {
   align-items: center;
   .content_bg {
     max-width: 1320px;
+    min-width: 343px;
     /* height: 523px; */
     background-color: #ffffff;
     border-radius: 24px;
   }
   .title {
-    font-size: 64px;
+    font-size: clamp(3rem, 6.5vw, 4rem);
     background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background-clip: text;
@@ -560,14 +562,27 @@ nav {
     font-weight: 700;
   }
 
+  .advpcate_text_container {
+      padding: 20px 20px;
+  }
+
   .advpcate_img_container {
     overflow: hidden;
-    border-radius: 0 24px 24px 0;
+    border-radius: 0 0 24px 24px;
     padding: 0;
 
     .img_cover {
       object-fit: cover;
       width: 100%;
+    }
+  }
+
+  @media screen and (min-width : 1200px ){
+    .advpcate_text_container {
+      padding: 0 20px;
+    }
+    .advpcate_img_container {
+      border-radius: 0 24px 24px 0;
     }
   }
 }
@@ -749,4 +764,8 @@ nav {
   object-fit: cover;
   width: 70%;
 }
+
+
+
+
 </style>
