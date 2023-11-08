@@ -44,6 +44,42 @@ import HelloWorld from './components/HelloWorld.vue'
       </nav>
     </div> -->
   </header>
+
+  <!-- 固定footer -->
+  <div class="fixed_footer container-fluid d-flex d-lg-none">
+
+      <a class="nav-link px-2 px-md-5 active text-center" aria-current="page" href="#section1">
+        <div>
+          <img src="@/assets/img/fixed_footer/advpcate_icon.svg" alt="" />
+          <p>候選人主張</p>
+        </div>
+      </a>
+      <a class="nav-link px-2 px-md-5 text-center" href="#section2">
+        <div>
+          <img src="@/assets/img/fixed_footer/last_event_icon.svg" alt="" />
+          <p>最新活動</p>
+        </div>
+      </a>
+      <a class="nav-link px-2 px-md-5 text-center" href="#section3">
+        <div>
+          <img src="@/assets/img/fixed_footer/policy_issues_icon.svg" alt="" />
+          <p>政策議題</p>
+        </div>
+      </a>
+      <a class="nav-link px-2 px-md-5 text-center" href="#section4">
+        <div>
+          <img src="@/assets/img/fixed_footer/donate_icon.svg" alt="" />
+          <p>小額捐款</p>
+        </div>
+      </a>
+      <a class="nav-link px-2 px-md-5 text-center" href="#section4">
+        <div>
+          <img src="@/assets/img/fixed_footer/email_icon.svg" alt="" />
+          <p>民眾服務信箱</p>
+        </div>  
+      </a>
+ 
+  </div>
   <!-- 標題人物 -->
   <section>
     <div class="container big_title_margin">
@@ -296,13 +332,13 @@ import HelloWorld from './components/HelloWorld.vue'
           <br class="d-lg-none">
           <span class="font_mantouSans title d-lg-none">喵先鋪路</span>
         <div class="img_container">
-          <img class="img_cover" src="@/assets/img/mainPage/name_title.svg"/>
+          <img class="img_cover_50" src="@/assets/img/mainPage/name_title.svg"/>
         </div>
       </div>
     </div>
   </section>
   <!-- footer -->
-  <footer class="text-secondary">
+  <footer class="text-secondary footer_padding">
     <div class="row container-fluid p-0 m-0 bg_advpcate block_footer justify-content-center align-items-center">
       <div class="col-10">
         <div class="row">
@@ -780,9 +816,12 @@ nav {
 
 .img_cover {
   object-fit: cover;
+  width: 100%;
+}
+.img_cover_50 {
+  object-fit: cover;
   width: 50%;
 }
-
 .img_cover_70 {
   object-fit: cover;
   width: 70%;
@@ -795,5 +834,33 @@ nav {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+/* footer */
+.footer_padding {
+  padding-bottom: 68px;
+}
+@media screen and (min-width : 992px ) {
+  .footer_padding {
+    padding-bottom: 0px;
+  }
+
+}
+
+/* 固定footer */
+.fixed_footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 68px;
+  background-color: #F8FAFC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & p {
+    margin: 0;
+    font-size: 10px;
+  }
 }
 </style>
