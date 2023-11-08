@@ -153,7 +153,7 @@ import HelloWorld from './components/HelloWorld.vue'
               <div class="col-8">
                 <p class="date">2023/12/24</p>
                 <h5>掃街模式開啟！帶著你的貓耳，來和我一起走！</h5>
-                <p>
+                <p class="multiline-ellipsis">
                   街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！
                 </p>
               </div>
@@ -167,7 +167,7 @@ import HelloWorld from './components/HelloWorld.vue'
               <div class="col-8">
                 <p class="date">2023/12/20</p>
                 <h5>收容所模特兒大比拼！</h5>
-                <p>
+                <p class="multiline-ellipsis">
                   今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！
                 </p>
               </div>
@@ -181,7 +181,7 @@ import HelloWorld from './components/HelloWorld.vue'
               <div class="col-8">
                 <p class="date">2023/12/26</p>
                 <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
-                <p>
+                <p class="multiline-ellipsis">
                   炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，
                   決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中， 每一隻貓咪都應該有自己的
                   VIP 休憩空間。
@@ -202,7 +202,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </section>
   <!-- 政策議題 -->
-  <!-- <section id="section3" class="text-secondary">
+  <section id="section3" class="text-secondary">
     <div class="row container block_policy_issues justify-content-center align-items-center">
       <div class="col-12">
         <div class="text-center">
@@ -217,97 +217,96 @@ import HelloWorld from './components/HelloWorld.vue'
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-4 event_content">
+          <div class="col-12 col-lg-6 col-xl-4 event_content">
             <h4>
               為毛孩子謀福利！<br />
               推動寵物醫療保障方案
             </h4>
             <img src="@/assets/img/policyIssues/issue_01.svg" alt="" />
           </div>
-          <div class="col-4 event_content">
+          <div class="col-12 col-lg-6 col-xl-4 event_content">
             <h4>
               打造休閒天堂！<br />
               推廣寵物休閒與娛樂場所
             </h4>
             <img src="@/assets/img/policyIssues/issue_02.svg" alt="" />
           </div>
-          <div class="col-4 event_content">
+          <div class="col-12 col-lg-6 col-xl-4 event_content">
             <h4>推廣寵物飼養教育，讓愛更加專業<br /></h4>
             <img src="@/assets/img/policyIssues/issue_03.svg" alt="" />
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- 小額捐款 -->
-  <!-- <section id="section4" class="text-secondary">
-    <div class="row container block_last_events justify-content-center align-items-center">
-      <div class="col-6">
-        <div class="block bg-primary">
-          <div class="row">
-            <div class="col-12">
-              <p class="font_mantouSans title">小額支持喵喵</p>
-              <p class="sub_title">您的小筆捐款，是每隻毛孩未來的大大動力！</p>
-            </div>
-            <div class="col-12 p-0">
-              <div class="row">
-                <div class="col-5 align-self-end">
-                  <button type="button" class="btn btn-info button_style">
-                    <div class="d-flex justify-content-center">
-                      <p>小額捐款</p>
-                      <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
-                    </div>
-                  </button>
-                </div>
-                <div class="col-7 img_container p-0">
-                  <img class="img_cover" src="@/assets/img/donate/hand.svg" alt="">
-                </div>
+  <section id="section4" class="text-secondary">
+    <div class="row container block_last_events">
+      <div class="col-12 col-md-6 mb-3">
+        <div class="row block bg-primary">
+          <div class="col-12">
+            <p class="font_mantouSans title">小額支持喵喵</p>
+            <p class="sub_title">您的小筆捐款，是每隻毛孩未來的大大動力！</p>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-7 col-lg-6 align-self-end">
+                <button type="button" class="btn btn-info button_style">
+                  <div class="d-flex justify-content-center">
+                    <p>小額捐款</p>
+                    <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
+                  </div>
+                </button>
+              </div>
+              <div class="col-5 col-lg-6 img_container p-0">
+                <img class="img_cover" src="@/assets/img/donate/hand.svg" alt="">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6">
-        <div class="block bg-secondary">
-          <div class="row">
-            <div class="col-12">
-              <p class="font_mantouSans title">民眾服務信箱</p>
-              <p class="sub_title">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</p>
-            </div>
-            <div class="col-12 p-0">
-              <div class="row button_height">
-                <div class="col-5 align-self-end">
-                  <button type="button" class="btn btn-info button_style" data-bs-toggle="modal" data-bs-target="#voiceModal">
-                    <div class="d-flex justify-content-center">
-                      <p>填寫表單</p>
-                      <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
-                    </div>
-                  </button>
-                </div>
+      <div class="col-12 col-md-6 mb-3">
+        <div class="row block bg-secondary">
+          <div class="col-12">
+            <p class="font_mantouSans title">民眾服務信箱</p>
+            <p class="sub_title">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</p>
+          </div>
+          <div class="col-12 align-self-end">
+            <div class="row">
+              <div class="col-6">
+                <button type="button" class="btn btn-info button_style" data-bs-toggle="modal" data-bs-target="#voiceModal">
+                  <div class="d-flex justify-content-center">
+                    <p>填寫表單</p>
+                    <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- 台灣的明天 口號 -->
-  <!-- <section>
+  <section>
     <div class="row container block_slogan justify-content-center align-items-center">
-      <div class="col-7 text-center">
-        <p class="font_mantouSans title ">台灣的明天 喵先鋪路</p>
-        <div>
-          <img src="@/assets/img/mainPage/name_title.svg" width="433" height="84" />
+      <div class="col-12 text-center">
+          <p class="font_mantouSans title d-none d-lg-block">台灣的明天 喵先鋪路</p>
+          <span class="font_mantouSans title d-lg-none">台灣的明天 </span>
+          <br class="d-lg-none">
+          <span class="font_mantouSans title d-lg-none">喵先鋪路</span>
+        <div class="img_container">
+          <img class="img_cover" src="@/assets/img/mainPage/name_title.svg"/>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- footer -->
-  <!-- <footer class="text-secondary">
+  <footer class="text-secondary">
     <div class="row container-fluid p-0 m-0 bg_advpcate block_footer justify-content-center align-items-center">
       <div class="col-10">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-md-6 mt-5">
             <img class="mb-2" src="@/assets/img/footer/name.svg" alt="" width="295" height="34">
             <div class="d-flex mb-2">
               <img class="me-2" src="@/assets/img/footer/fb_icon.svg" alt="" width="48" height="48">
@@ -316,7 +315,7 @@ import HelloWorld from './components/HelloWorld.vue'
             </div>
             <p>© 2023 喵立翰 Miao Li-Han 版權所有</p>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-md-6 mt-5">
             <h4>競選總部</h4>
             <p>
               辦公室地址：喵星區，毛茸茸大道88號，喵喵大樓3樓<br>
@@ -326,7 +325,7 @@ import HelloWorld from './components/HelloWorld.vue'
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
   
   <!-- modal -->
   <div class="modal fade" id="voiceModal" tabindex="-1" aria-labelledby="voiceModalLabel" aria-hidden="true">
@@ -613,6 +612,7 @@ nav {
     overflow: hidden;
     margin-bottom: 24px;
     border-radius: 8px;
+    padding: 0;
   }
   .title {
     font-size: clamp(3rem, 6.5vw, 4rem);
@@ -644,7 +644,7 @@ nav {
     line-height: 36px;
   }
   .title {
-    font-size: 64px;
+    font-size: clamp(3rem, 6.5vw, 4rem);
     background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background-clip: text;
@@ -663,14 +663,14 @@ nav {
 }
 
 .block {
-  height: 590px;
   width: 100%;
+  height: 100%;
   border-radius: 32px ;
-  padding: 96px;
+  padding: 40px 24px;
   
   .title {
     color:#ffffff;
-    font-size: 52px;
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
   }
 
   .sub_title {
@@ -695,20 +695,32 @@ nav {
 .block_slogan {
   margin: 104px auto;
   .title {
-    display: inline-block;
     white-space: nowrap;
-    font-size: 64px;
+    font-size: clamp(3rem, 6.5vw, 4rem);
     background: linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background: -webkit-linear-gradient(90deg, #e6793b 1.54%, #ff4185 97.86%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
+
+  .img_container {
+    overflow: hidden;
+  }
+
+  .img_cover {
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+  }
+
+  @media screen and (min-width : 1200px ){
+    .img_cover {
+      width: 30%;
+    }
+  }
 }
 
-.block_footer {
-  height: 263px;
-}
 
 .modal_custom {
   .modal-content {
@@ -768,7 +780,7 @@ nav {
 
 .img_cover {
   object-fit: cover;
-  width: 100%;
+  width: 50%;
 }
 
 .img_cover_70 {
@@ -778,5 +790,10 @@ nav {
 
 
 
-
+.multiline-ellipsis { 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 </style>
