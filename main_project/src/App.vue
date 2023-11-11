@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import VoiceModal from './components/VoiceModal.vue'
+import DonateModal from './components/DonateModal.vue'
+
 </script>
 
 <template>
@@ -287,7 +289,7 @@ import HelloWorld from './components/HelloWorld.vue'
           <div class="col-12">
             <div class="row">
               <div class="col-7 col-lg-6 align-self-end">
-                <button type="button" class="btn btn-info button_style">
+                <button type="button" class="btn btn-info button_style" data-bs-toggle="modal" data-bs-target="#donateModal">
                   <div class="d-flex justify-content-center">
                     <p>小額捐款</p>
                     <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
@@ -364,43 +366,8 @@ import HelloWorld from './components/HelloWorld.vue'
   </footer>
   
   <!-- modal -->
-  <div class="modal fade" id="voiceModal" tabindex="-1" aria-labelledby="voiceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-xl modal_custom">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="voiceModalLabel">民眾服務信箱</h5>
-          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="cancel_button">
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-7 overflow-hidden">
-              <img class="img_cover" src="@/assets/img/modal/mail.svg" alt="">
-            </div>
-            <div class="col-5">
-              <div class="mb-3">
-                <label for="form_name" class="form-label">您的姓名</label>
-                <input type="text" class="form-control" id="form_name" placeholder="輸入姓名">
-              </div>
-              <div class="mb-3">
-                <label for="form_email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="form_email" placeholder="email">
-              </div>
-              <div class="mb-3">
-                <label for="form_mobile" class="form-label">手機</label>
-                <input type="number" class="form-control" id="form_mobile" placeholder="手機號碼">
-              </div>
-              <div class="mb-3">
-                <label for="form_voice" class="form-label">您的建言</label>
-                <textarea class="form-control form_textarea" id="form_voice" rows="3"></textarea>
-              </div>
-              <button type="button" class="btn btn-primary button_custom">送出意見</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <VoiceModal/>
+  <DonateModal/>
   <RouterView />
 </template>
 
