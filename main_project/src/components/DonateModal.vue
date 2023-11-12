@@ -21,32 +21,32 @@
     <div class="modal-dialog modal-dialog-scrollable modal-xl modal_custom">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="donateModalLabel">民眾服務信箱</h5>
+          <h5 class="modal-title" id="donateModalLabel">小額捐款</h5>
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="cancel_button">
           </button>
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-12 col-lg-7 overflow-hidden mb-3">
-              <img class="img_cover d-none d-lg-block" src="@/assets/img/modal/donate.svg" alt=""> 
-              <img class="img_cover d-block d-lg-none" src="@/assets/img/modal/mobile_donate.png" alt="">
+            <div class="col-12 col-xl-7 overflow-hidden mb-3">
+              <img class="img_cover d-none d-xl-block" src="@/assets/img/modal/donate.svg" alt=""> 
+              <img class="img_cover d-block d-xl-none" src="@/assets/img/modal/mobile_donate.svg" alt="">
             </div>
-            <div v-if="!isSend" class="col-12 col-lg-5">
+            <div v-if="!isSend" class="col-12 col-xl-5">
               <h5 class="text-start">捐款方案</h5>
-              <div class="mb-2 text-center">
+              <div class="mb-2">
                 <input type="radio" name="colorSelector" id="radio_primary_level_1" value="pink"/>
                 <label class="mx-0" for="radio_primary_level_1">
                   <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-12 col-lg-4">
-                      <h5 class="text-primary m-0">喵星人之友</h5>
+                      <h5 class="text-primary mb-4 m-lg-0">喵星人之友</h5>
                     </div>
                     <div class="col-12 col-lg-8">
                       <div class="row align-items-center">
-                        <div class="col-6 text-end">
+                        <div class="col-6 text-start text-lg-end">
                           <span class="me-2">NT$</span>
                           <span class="text_donate_moeny">600</span>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-end">
                           <span class="text_donate_count">已有 9,957 人贊助</span>
                         </div>
                       </div>
@@ -54,20 +54,20 @@
                   </div>
                 </label>
               </div>
-              <div class="mb-2 text-center">
+              <div class="mb-2">
                 <input type="radio" name="colorSelector" id="radio_primary_level_2" value="pink"/>
                 <label class="mx-0" for="radio_primary_level_2">
                   <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-12 col-lg-4">
-                      <h5 class="text-primary m-0">喵星大使</h5>
+                      <h5 class="text-primary mb-4 m-lg-0">喵星大使</h5>
                     </div>
                     <div class="col-12 col-lg-8">
                       <div class="row align-items-center">
-                        <div class="col-6 text-end">
+                        <div class="col-6 text-start text-lg-end">
                           <span class="me-2">NT$</span>
                           <span class="text_donate_moeny">6,000</span>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-end">
                           <span class="text_donate_count">已有 2,000 人贊助</span>
                         </div>
                       </div>
@@ -75,20 +75,20 @@
                   </div>
                 </label>
               </div>
-              <div class="mb-2 text-center">
+              <div class="mb-2">
                 <input type="radio" name="colorSelector" id="radio_primary_level_3" value="pink"/>
                 <label class="mx-0" for="radio_primary_level_3">
                   <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-12 col-lg-4">
-                      <h5 class="text-primary m-0">喵星傳奇</h5>
+                      <h5 class="text-primary mb-4 m-lg-0">喵星傳奇</h5>
                     </div>
                     <div class="col-12 col-lg-8">
                       <div class="row align-items-center">
-                        <div class="col-6 text-end">
+                        <div class="col-6 text-start text-lg-end">
                           <span class="me-2">NT$</span>
                           <span class="text_donate_moeny">60,000</span>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-end">
                           <span class="text_donate_count">已有 999 人贊助</span>
                         </div>
                       </div>
@@ -98,12 +98,12 @@
               </div>
               <div class="mb-2">
                 <input type="radio" name="colorSelector" id="radio_primary_level_4" value="pink"/>
-                <label class="custom_label mx-0" for="radio_primary_level_4">
+                <label class="mx-0" for="radio_primary_level_4">
                   <div class="row h-100 justify-content-center"> 
                     <div class="col-12">
-                      <h5 class="text-primary px-2">自訂贊助金額</h5>
-                    </div>
-                    <input type="number" class="form-control custom_input" id="form_name" placeholder="輸入金額">
+                      <h5 class="text-primary mb-4 m-lg-0">自訂贊助金額</h5>
+                      <input type="number" class="form-control custom_input" id="form_name" placeholder="輸入金額">
+                    </div>  
                   </div>
                 </label>
               </div>
@@ -114,10 +114,12 @@
                 >前往捐款
               </button>
             </div>
-            <div v-else class="col-12 col-lg-5 align-self-center">
+            <div v-else class="col-12 col-xl-5 align-self-center">
               <div class="row justify-content-center align-items-center">
-                <div class="col-6 text-center">
+                <div class="col-12 text-center">
                   <h3 class="finish_text">感謝您的捐款</h3>
+                </div>
+                <div class="col-6">
                   <div>
                     <img class="img_cover finish_img_margin" src="@/assets/img/modal/finish.svg" alt="">
                   </div>
@@ -199,6 +201,7 @@
     }
 
     .finish_text {
+      margin-top: 20px ;
       font-size: 28px;
     }
 
@@ -208,19 +211,9 @@
     }
 
     & input[type="radio"] + label {
-      height: 85px;
       width: 100%;
       margin: 8px;
-      padding: 10px;
-      border-radius: 25px;
-      position: relative;
-    }
-
-    & input[type="radio"] + .custom_label {
-      height: 100%;
-      width: 100%;
-      margin: 8px;
-      padding: 10px;
+      padding: 22.5px 13.5px;
       border-radius: 25px;
       position: relative;
     }
@@ -263,7 +256,7 @@
     }
 
     .custom_input {
-      width: 90%;
+      width: 100%;
     }
   }
 }

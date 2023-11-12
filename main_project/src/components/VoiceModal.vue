@@ -5,7 +5,6 @@
       isSend.value = true;
    } 
 
-   
    nextTick(() => {
     const voiceModal = document.getElementById('voiceModal')
     voiceModal.addEventListener('hidden.bs.modal', function () {
@@ -28,11 +27,11 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-12 col-lg-7 overflow-hidden mb-3">
-              <img class="img_cover d-none d-lg-block" src="@/assets/img/modal/mail.svg" alt="">
-              <img class="img_cover d-block d-lg-none" src="@/assets/img/modal/mobile_voice_man.svg" alt="">
+            <div class="col-12 col-xl-7 overflow-hidden mb-3">
+              <img class="img_cover d-none d-xl-block" src="@/assets/img/modal/mail.svg" alt="">
+              <img class="img_cover d-block d-xl-none" src="@/assets/img/modal/mobile_voice_man.svg" alt="">
             </div>
-            <div v-if="!isSend" class="col-12 col-lg-5">
+            <div v-if="!isSend" class="col-12 col-xl-5">
               <div class="mb-3">
                 <label for="form_name" class="form-label">您的姓名</label>
                 <input type="text" class="form-control" id="form_name" placeholder="輸入姓名">
@@ -56,10 +55,13 @@
                 >送出意見
               </button>
             </div>
-            <div v-else class="col-12 col-lg-5 align-self-center">
+            <div v-else class="col-12 col-xl-5 align-self-center">
               <div class="row justify-content-center align-items-center">
-                <div class="col-6 text-center">
+                <div class="col-12">
                   <h3 class="finish_text">感謝您的意見</h3>
+                </div>
+                <div class="col-6 text-center">
+                  
                   <div>
                     <img class="img_cover finish_img_margin" src="@/assets/img/modal/finish.svg" alt="">
                   </div>
@@ -141,6 +143,7 @@
     }
 
     .finish_text {
+      margin-top: 20px;
       font-size: 28px;
     }
   }
