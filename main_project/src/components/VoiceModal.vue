@@ -61,7 +61,6 @@
                   <h3 class="finish_text">感謝您的意見</h3>
                 </div>
                 <div class="col-6 text-center">
-                  
                   <div>
                     <img class="img_cover finish_img_margin" src="@/assets/img/modal/finish.svg" alt="">
                   </div>
@@ -145,6 +144,7 @@
     .finish_text {
       margin-top: 20px;
       font-size: 28px;
+      text-align: center;
     }
   }
 }

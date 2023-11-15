@@ -203,6 +203,7 @@
     .finish_text {
       margin-top: 20px ;
       font-size: 28px;
+      text-align: center;
     }
 
     & input[type="radio"] {

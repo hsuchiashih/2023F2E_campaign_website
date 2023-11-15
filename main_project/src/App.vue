@@ -2,7 +2,8 @@
 import { RouterLink, RouterView } from 'vue-router'
 import VoiceModal from './components/VoiceModal.vue'
 import DonateModal from './components/DonateModal.vue'
-
+import LastEventModal from './components/LastEventModal.vue'
+import PolicyIssueModal from './components/PolicyIssueModal.vue'
 </script>
 
 <template>
@@ -23,13 +24,13 @@ import DonateModal from './components/DonateModal.vue'
         </div>
         <div class="d-none d-sm-block">
           <a href="#" class="pe-3">
-            <img src="@/assets/img/nav/fb_icon.svg " width="32" height="32" />
+            <img src="@/assets/img/icons/fb_icon.svg " width="32" height="32" />
           </a>
           <a href="#" class="pe-3">
-            <img src="@/assets/img/nav/ig_icon.svg " width="32" height="32" />
+            <img src="@/assets/img/icons/ig_icon.svg " width="32" height="32" />
           </a>
           <a href="#">
-            <img src="@/assets/img/nav/yt_icon.svg " width="32" height="32" />
+            <img src="@/assets/img/icons/yt_icon.svg " width="32" height="32" />
           </a>
         </div>
       </div>
@@ -228,7 +229,7 @@ import DonateModal from './components/DonateModal.vue'
             </div>
           </div>
           <div class="col-4 mb-4">
-            <button type="button" class="btn btn-info button_style">
+            <button type="button" class="btn btn-info button_style" data-bs-toggle="modal" data-bs-target="#lastEventModal">
               <div class="d-flex justify-content-center">
                 <p>查看更多</p>
                 <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
@@ -255,7 +256,7 @@ import DonateModal from './components/DonateModal.vue'
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-12 col-lg-6 col-xl-4 event_content">
+          <div class="col-12 col-lg-6 col-xl-4 event_content" data-bs-toggle="modal" data-bs-target="#policyIssueModal">
             <h4>
               為毛孩子謀福利！<br />
               推動寵物醫療保障方案
@@ -311,13 +312,16 @@ import DonateModal from './components/DonateModal.vue'
           </div>
           <div class="col-12 align-self-end">
             <div class="row">
-              <div class="col-6">
+              <div class="col-7 col-lg-6 align-self-end">
                 <button type="button" class="btn btn-info button_style" data-bs-toggle="modal" data-bs-target="#voiceModal">
                   <div class="d-flex justify-content-center">
                     <p>填寫表單</p>
                     <img src="@/assets/img/icons/arrow_forward.svg" alt="" />
                   </div>
                 </button>
+              </div>
+              <div class="col-5 col-lg-6 img_container p-0">
+                <img class="img_cover" src="@/assets/img/voice/email.svg" alt="">
               </div>
             </div>
           </div>
@@ -368,6 +372,8 @@ import DonateModal from './components/DonateModal.vue'
   <!-- modal -->
   <VoiceModal/>
   <DonateModal/>
+  <LastEventModal/>
+  <PolicyIssueModal/>
   <RouterView />
 </template>
 
