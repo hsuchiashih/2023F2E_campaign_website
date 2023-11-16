@@ -1,6 +1,8 @@
 <script setup>
 import { ref, toRefs, computed, watch } from 'vue'
-
+import img_issue_01 from '@/assets/img/policyIssues/issue_01.svg'
+import img_issue_02 from '@/assets/img/policyIssues/issue_02.svg' 
+import img_issue_03 from '@/assets/img/policyIssues/issue_03.svg'
 const props = defineProps({
   issueId: Number,
 });
@@ -10,7 +12,7 @@ const issueList = ref([
   {
     id: '1',
     title:'為毛孩子謀福利！推動寵物醫療保障方案',
-    img: '/src/assets/img/policyIssues/issue_01.svg',
+    img: img_issue_01,
     context: [
       {
         title: '設立寵物醫療基金',
@@ -29,7 +31,7 @@ const issueList = ref([
   {
     id: '2',
     title:'打造休閒天堂！推廣寵物休閒與娛樂場所',
-    img: '/src/assets/img/policyIssues/issue_02.svg',
+    img: img_issue_02,
     context: [
       {
         title: '寵物休閒天堂',
@@ -40,7 +42,7 @@ const issueList = ref([
   {
     id: '3',
     title:'推廣寵物飼養教育，讓愛更加專業打造',
-    img: '/src/assets/img/policyIssues/issue_03.svg',
+    img: img_issue_03,
     context: [
       {
         title: '推廣寵物飼養教育',
