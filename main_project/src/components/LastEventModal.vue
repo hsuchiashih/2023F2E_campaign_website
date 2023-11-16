@@ -50,7 +50,7 @@ eventList.value = swapElements(list, 0, eventIndex)
         <div class="modal-body">
           <div class="row">
             <div class="col-12 col-lg-5 mb-5">
-              <img class="img_cover" :src="eventList[0].img" alt="">
+              <img class="img_cover" :src="require(`${eventList[0].img}`)" alt="">
               <p>{{ eventList[0].title }}</p>
               <div class="d-flex">
                 <p class="align-self-center m-0 pe-2">分享</p>
@@ -85,11 +85,11 @@ eventList.value = swapElements(list, 0, eventIndex)
                 <div class="col-12">
                   <div class="row">
                     <div class="col-4 event_item" @click=clickEvent(1)>
-                      <img class="img_cover" :src="eventList[1].img" alt="">
+                      <img class="img_cover" :src="require(`${eventList[1].img}`)" alt="">
                       <p>{{ eventList[1].title }}</p>
                     </div>
                     <div class="col-4 event_item" @click=clickEvent(2)>
-                      <img class="img_cover" :src="eventList[2].img" alt="">
+                      <img class="img_cover" :src="require(`${eventList[2].img}`)" alt="">
                       <p>{{ eventList[2].title }}</p>
                     </div>
                   </div>
