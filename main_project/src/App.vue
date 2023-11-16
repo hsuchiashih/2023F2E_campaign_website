@@ -279,6 +279,8 @@ const clickIssue = ((id) => {
           </div>
           <div
             class="col-12 col-lg-6 col-xl-4 event_content"
+            data-bs-toggle="modal"
+            data-bs-target="#policyIssueModal"
             data-aos="fade-in"
             data-aos-duration="2000"
             data-os-delay="2200"
@@ -292,6 +294,8 @@ const clickIssue = ((id) => {
           </div>
           <div
             class="col-12 col-lg-6 col-xl-4 event_content"
+            data-bs-toggle="modal"
+            data-bs-target="#policyIssueModal"
             data-aos="fade-in"
             data-aos-duration="2000"
             data-os-delay="2400"
@@ -630,7 +634,7 @@ nav {
     overflow: hidden;
     margin-bottom: 24px;
     border-radius: 24px;
-
+    cursor: pointer;
     & img {
       width: 100%;
     }
