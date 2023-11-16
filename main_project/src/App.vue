@@ -1,10 +1,25 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { RouterView } from 'vue-router'
 import VoiceModal from './components/VoiceModal.vue'
 import DonateModal from './components/DonateModal.vue'
 import LastEventModal from './components/LastEventModal.vue'
 import PolicyIssueModal from './components/PolicyIssueModal.vue'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+onMounted(() => {
+  AOS.init({
+    once: false, 
+  })
+});
+
+const issueId = ref(1)
+const clickIssue = ((id) => {
+  issueId.value = id;
+});
 </script>
+
 
 <template>
   <!-- nav -->
@@ -35,22 +50,10 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
         </div>
       </div>
     </nav>
-
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
   </header>
 
   <!-- 固定footer -->
   <div class="fixed_footer container-fluid d-flex d-lg-none">
-
       <a class="nav-link px-2 px-md-5 active text-center" aria-current="page" href="#section1">
         <div>
           <img src="@/assets/img/fixed_footer/advpcate_icon.svg" alt="" />
@@ -81,17 +84,21 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
           <p>民眾服務信箱</p>
         </div>  
       </a>
- 
   </div>
   <!-- 標題人物 -->
   <section>
     <div class="container big_title_margin">
       <div class="row">
         <div class="col-12 text-center pb-3">
-          <p class="font_mantouSans big_title d-none d-lg-block">台灣的明天 喵先鋪路</p>
-          <span class="font_mantouSans big_title d-lg-none">台灣的明天 </span>
-          <br class="d-lg-none">
-          <span class="font_mantouSans big_title d-lg-none">喵先鋪路</span>
+          <p 
+            class="font_mantouSans big_title d-none d-lg-block"
+            data-aos="zoom-out"
+            data-aos-duration="3000">台灣的明天 喵先鋪路</p>
+          <div data-aos="zoom-out" data-aos-once="false" data-aos-duration="3000">
+            <span class="font_mantouSans big_title d-lg-none">台灣的明天 </span>
+            <br class="d-lg-none">
+            <span class="font_mantouSans big_title d-lg-none">喵先鋪路</span>
+          </div>
         </div>
         <div class="col-12 text-center pb-3">
           <div class="row justify-content-center align-items-center">
@@ -103,7 +110,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
             </div>
           </div>
         </div>
-        <div class="col-12 text-center img_container">
+        <div class="col-12 text-center img_container" data-aos="fade-in" data-aos-duration="3000">
           <img class="img_cover_70" src="@/assets/img/mainPage/man_and_bg.svg"/>
         </div>
       </div>
@@ -129,7 +136,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
   <!-- 候選人主張 -->
   <section id="section1" class="text-secondary">
     <div class="container-fluid bg_advpcate">
-      <div class="row container m-auto block_advpcate">
+      <div class="row container m-auto block_advpcate" data-aos="fade-in" data-aos-duration="2000">
         <div class="col-12 content_bg">
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-12 col-xl-6 advpcate_text_container">
@@ -166,7 +173,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
         </div>
         <p class="font_mantouSans title text-center">最新活動</p>
       </div>
-      <div class="col-lg-12 col-xl-6">
+      <div class="col-lg-12 col-xl-6" data-aos="fade-in" data-aos-duration="2000">
         <div class="row">
           <div class="col-12 img_container">
             <img class="img_cover" src="@/assets/img/lastEvents/main_event.svg" alt="" />
@@ -184,7 +191,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
       </div>
       <div class="col-lg-12 col-xl-6">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12" data-aos="slide-left" data-aos-duration="2000" data-os-delay="2000">
             <div class="row">
               <div class="col-4 event_content">
                 <img class="img_cover" src="@/assets/img/lastEvents/event_01.svg" alt="" />
@@ -198,7 +205,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
               </div>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12" data-aos="slide-left" data-aos-duration="2000" data-os-delay="2200">
             <div class="row">
               <div class="col-4 event_content">
                 <img class="img_cover"  src="@/assets/img/lastEvents/event_02.svg" alt="" />
@@ -212,7 +219,7 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
               </div>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12" data-aos="slide-left" data-aos-duration="2000" data-os-delay="2400">
             <div class="row">
               <div class="col-4 event_content">
                 <img class="img_cover" src="@/assets/img/lastEvents/event_03.svg" alt="" />
@@ -256,21 +263,39 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-12 col-lg-6 col-xl-4 event_content" data-bs-toggle="modal" data-bs-target="#policyIssueModal">
+          <div 
+            class="col-12 col-lg-6 col-xl-4 event_content" 
+            data-bs-toggle="modal"
+            data-bs-target="#policyIssueModal"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-os-delay="2000"
+            @click="clickIssue(1)">
             <h4>
               為毛孩子謀福利！<br />
               推動寵物醫療保障方案
             </h4>
             <img src="@/assets/img/policyIssues/issue_01.svg" alt="" />
           </div>
-          <div class="col-12 col-lg-6 col-xl-4 event_content">
+          <div
+            class="col-12 col-lg-6 col-xl-4 event_content"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-os-delay="2200"
+            @click="clickIssue(2)"
+          >
             <h4>
               打造休閒天堂！<br />
               推廣寵物休閒與娛樂場所
             </h4>
             <img src="@/assets/img/policyIssues/issue_02.svg" alt="" />
           </div>
-          <div class="col-12 col-lg-6 col-xl-4 event_content">
+          <div
+            class="col-12 col-lg-6 col-xl-4 event_content"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-os-delay="2400"
+            @click="clickIssue(3)">
             <h4>推廣寵物飼養教育，讓愛更加專業<br /></h4>
             <img src="@/assets/img/policyIssues/issue_03.svg" alt="" />
           </div>
@@ -333,10 +358,15 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
   <section>
     <div class="row container block_slogan justify-content-center align-items-center">
       <div class="col-12 text-center">
-          <p class="font_mantouSans title d-none d-lg-block">台灣的明天 喵先鋪路</p>
-          <span class="font_mantouSans title d-lg-none">台灣的明天 </span>
-          <br class="d-lg-none">
-          <span class="font_mantouSans title d-lg-none">喵先鋪路</span>
+          <p class="font_mantouSans title d-none d-lg-block"
+            data-aos="slide-down"
+            data-aos-duration="2000"
+            data-os-delay="50">台灣的明天 喵先鋪路</p>
+          <div>
+            <span class="font_mantouSans title d-lg-none">台灣的明天 </span>
+            <br class="d-lg-none">
+            <span class="font_mantouSans title d-lg-none">喵先鋪路</span>
+          </div>
         <div class="img_container">
           <img class="img_cover_50" src="@/assets/img/mainPage/name_title.svg"/>
         </div>
@@ -373,73 +403,9 @@ import PolicyIssueModal from './components/PolicyIssueModal.vue'
   <VoiceModal/>
   <DonateModal/>
   <LastEventModal/>
-  <PolicyIssueModal/>
+  <PolicyIssueModal :issue-id="issueId"/>
   <RouterView />
 </template>
-
-<!-- <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style> -->
 
 <style lang="scss">
 @import './assets/all.scss';
@@ -837,3 +803,4 @@ nav {
   }
 }
 </style>
+<style src="wow.js/css/libs/animate.css"></style>
